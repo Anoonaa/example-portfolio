@@ -1,87 +1,159 @@
-body {
-  font-family: Arial, sans-serif;
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f4;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 header {
-  background-color: #21409b;
+  background: linear-gradient(180deg, #1a1a1e 0%, #2c2c34 100%);
   color: white;
   text-align: center;
-  padding: 2rem;
+  padding: 4rem 0;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1.2rem;
-}
-
-main {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
+  opacity: 0.8;
 }
 
 .greeting-section {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.greeting-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  background: #0071e3;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.output {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0071e3;
+  transition: opacity 0.3s ease;
+}
+
+.output.active {
+  opacity: 1;
+}
+
+.projects {
+  padding: 3rem 0;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 2rem;
 }
 
-.greeting-section h2 {
-  font-size: 1.8rem;
-  color: #333;
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
-button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  background-color: #21409b;
-  color: white;
-  border: none;
-  border-radius: 5px;
-}
-
-button:hover {
-  background-color: #1a3076;
-}
-
-#output {
-  margin-top: 1rem;
-  min-height: 1.5rem;
-}
-
-.projects h2 {
-  font-size: 1.8rem;
-  color: #333;
-}
-
-.projects ul {
-  list-style: none;
-  padding: 0;
-}
-
-.projects li {
+.project-card {
   background: white;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #6e6e73;
 }
 
 footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #21409b;
+  background: #1a1a1e;
   color: white;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .greeting-section h2,
+  .projects h2 {
+    font-size: 1.5rem;
+  }
+
+  button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
 }
