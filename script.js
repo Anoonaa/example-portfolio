@@ -40,9 +40,10 @@ function displayMessage(message) {
     return;
   }
   output.innerText = message;
-  output.style.marginTop = "1rem";
-  output.style.fontWeight = "bold";
-  output.style.color = "#21409b";
+  output.style.marginTop = "1.5rem";
+  output.style.fontWeight = "600";
+  output.style.color = "#0071e3";
+  output.classList.add("active");
 }
 
 // Reset content and styles
@@ -54,4 +55,5 @@ function resetOutput() {
   }
   output.innerText = "";
   output.removeAttribute("style");
+  output.classList.remove("active");
 }
