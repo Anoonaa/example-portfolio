@@ -3,32 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Anoona </title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm Anoona! Explore my work below.</p>
+    <div class="container">
+      <h1>Anoona Sithole</h1>
+      <p>Scalable Tech, Finance, and Innovation. I build secure, efficient, and future-ready solutions that bridge technology and business.</p>
+    </div>
   </header>
   <main>
-    <section class="greeting-section">
-      <h2>Personalized Greeting</h2>
-      <button id="loadBtn">Show Greeting</button>
-      <button id="clearBtn">Clear Message</button>
-      <div id="output"></div>
+    <section class="greeting-section container">
+      <h2>Check out my Greeting Toggle</h2>
+      <div class="button-group">
+        <button id="loadBtn">Show Greeting</button>
+        <button id="clearBtn">Clear Message</button>
+      </div>
+      <div id="output" class="output"></div>
     </section>
-    <section class="projects">
-      <h2>My Projects</h2>
-      <ul>
-        <li>Summit - A web app built with JavaScript.</li>
-        <li>anoona.io - A responsive portfolio site.</li>
-        <li> chess.com - Coming soon!</li>
-      </ul>
+    <section class="projects container">
+      <h2>My Work</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Mr Kalkulattor</h3>
+          <p>A  Calculator web app built with JavaScript and modern frameworks.</p>
+        </div>
+        <div class="project-card">
+          <h3>Pinterest</h3>
+          <p>A responsive portfolio showcasing clean design.</p>
+        </div>
+        <div class="project-card">
+          <h3>OPAL</h3>
+          <p>Coming soon: An innovative AI-driven application.</p>
+        </div>
+      </div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Anoona. All rights reserved.</p>
+    <div class="container">
+      <p>© 2025 Anoona.</p>
+    </div>
   </footer>
   <script src="script.js"></script>
 </body>
